@@ -1,0 +1,38 @@
+name: waste-mvp
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+
+  # Data
+  - pandas>=2.0
+  - numpy>=1.24
+  - sqlalchemy>=2.0
+
+  # APIs & Scraping
+  - requests>=2.31
+  - httpx
+  - beautifulsoup4
+
+  # Configuración
+  - python-dotenv
+
+  # Notebooks
+  - jupyterlab
+  - ipykernel
+
+  # Calidad de código
+  - black
+  - flake8
+
+  # Testing
+  - pytest
+
+  # Utilidades
+  - tqdm
+  - pip
+  - pip:
+    - duckdb
