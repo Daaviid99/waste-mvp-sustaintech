@@ -1,0 +1,30 @@
+# Normaliza saltos de línea entre Windows (CRLF) y Mac/Linux (LF)
+# LF es el estándar en repositorios — Windows convierte al hacer checkout. 
+# David: Es el formato de Mac y Linux, que son los sistemas donde normalmente corren los servidores y pipelines de datos en producción. Windows se adapta a ellos, no al revés.
+
+* text=auto
+
+# Código → siempre LF en el repo
+*.py        text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.md        text eol=lf
+*.txt       text eol=lf
+*.toml      text eol=lf
+*.ini       text eol=lf
+*.env       text eol=lf
+*.ipynb     text eol=lf
+*.sh        text eol=lf
+
+# Scripts Windows → CRLF al hacer checkout en Windows
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+
+# Binarios → sin conversión
+*.png       binary
+*.jpg       binary
+*.pdf       binary
+*.parquet   binary
+*.zip       binary
+*.h5        binary
